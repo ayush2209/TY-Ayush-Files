@@ -1,0 +1,22 @@
+<div class="col col-md-6 card card-body offset-3 text-center mt-5">
+    <div>
+        <h1>{{title}}</h1>
+        <app-first-component></app-first-component>
+    </div>
+
+    <div *ngFor='let names of name' class="card card-body">
+        <p>{{names}}</p>
+    </div>
+
+    <div *ngIf="title!= '' ">
+        <p>{{title}}</p>
+    </div>
+    <div>
+        <h1>People Array</h1>
+        <ul *ngFor='let details of people'>
+            <li *ngIf='details.age === 21' style="color: rgb(94, 124, 223);">
+                {{details.name}}
+            </li>
+        </ul>
+    </div>
+</div>
