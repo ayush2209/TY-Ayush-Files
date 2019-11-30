@@ -1,0 +1,38 @@
+<div class="col col-md-6 card card-body offset-3 text-center mt-5">
+    <div>
+        <h1>{{title}}</h1>
+        <app-first-component></app-first-component>
+    </div>
+
+    <div *ngFor='let names of name' class="card card-body">
+        <p>{{names}}</p>
+    </div>
+
+    <div *ngIf="title!= '' ">
+        <p>{{title}}</p>
+    </div>
+    <div>
+        <h1>People Array</h1>
+        <ul *ngFor='let details of people'>
+            <li *ngIf='details.age === 21' style="color: rgb(94, 124, 223);">
+                {{details.name}}
+            </li>
+        </ul>
+    </div>
+    <hr>
+        <div>
+            <h1>ngClass :- Directives</h1>
+            <p [ngClass]='ClassArray'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, sit.
+            </p>
+            <h1>ngStyle : Directives</h1>
+            <p [ngStyle]="{'padding' : flag ? '100px' : '0px' , 'background' : flag ? 'green' : 'red' }">Ayush Anand</p>
+        </div>
+        <div>
+            <h3>Custom DIrective : Expample Directive</h3>
+
+            <div>
+                <p appExample="appExample">Custom DIrective</p>
+            </div>
+
+        </div>
+    </div>
