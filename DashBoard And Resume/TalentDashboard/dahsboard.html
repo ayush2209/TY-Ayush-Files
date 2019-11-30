@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>Document</title>
+        <link href="./dashboard.css" rel="stylesheet">
+        <link href="./bar.css" rel="stylesheet">
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+        <link href="./footer.css" rel="stylesheet">
+
+        <style>
+            a.ex2:hover,
+            a.ex2:active {
+                font-size: 150%;
+            }
+        </style>
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <!-- font-awesome -->
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./req.html">JobOpening</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./candidateStatus.html">Selected</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container col col-md-11">
+
+            <div class="row col-md-12">
+                <div class="col col-md-6">
+                    <figure class="highcharts-figure">
+                        <div id="container">
+                            <button class="btn btn-primary" id="plain">Plain</button>
+                            <button class="btn btn-primary" id="inverted">Inverted</button>
+                            <button class="btn btn-primary" id="polar">Polar</button>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col col-md-6">
+                    <figure class="highcharts-figure">
+                        <div id="container1"></div>
+                    </figure>
+                </div>
+            </div>
+            <div class="row col-md-12 mt-5">
+                <div class="col col-md-6">
+                    <div id="container11"></div>
+                </div>
+                <div class="col col-md-6">
+                    <div id="container2"></div>
+                </div>
+            </div>
+            <div class="row col col-nd-12 mt-5">
+                <div class=" col col-md-6 ">
+                    <div id="containerBar"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./monthlyRequirement.js"></script>
+        <script src="./requirementSkillwise.js"></script>
+        <script src="./skillBasedSourcing.js"></script>
+        <script src="./yoe.js"></script>
+        <script src="./candiadateStatus.js"></script>
+    </body>
+    <footer class="mt-5">
+        <div class="container-fluid bg-primary py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row py-0">
+                            <div class="col-sm-1 hidden-md-down">
+                                <a class="bg-circle bg-info" href="#">
+                                    <i aria-hidden="true " class="fa fa-2x fa-fw fa-address-card"></i>
+                                </a>
+                            </div>
+                            <div class="col-sm-11 text-white">
+                                <div class="mt-3">
+                                    <a class="ex2" href="http://www.testyantra.com/">
+                                        <p>
+                                            <span class="header-font ml-3" id="decoration">TestYantra Software Solutions</p>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-inline-block">
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
+                                <a href="https://www.facebook.com/TestYantra/">
+                                    <i class="fa fa-2x fa-fw fa-facebook text-white"></i>
+                                </a>
+                            </div>
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
+                                <a href="https://twitter.com/">
+                                    <i class="fa fa-2x fa-fw fa-twitter text-white"></i>
+                                </a>
+                            </div>
+
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
+                                <a href="https://in.linkedin.com/company/test-yantra-software-solutions">
+                                    <i class="fa fa-2x fa-fw fa-linkedin text-white"></i>
+                                </a>
+                            </div>
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
+                                <a href="http://www.testyantra.com/contact-us">
+                                    <i class="fa fa-2x fa-fw fa-google text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">
+            Copyright © TestYantra Software Solutions , 2019. All right reserved.
+        </p>
+    </footer>
+</html>

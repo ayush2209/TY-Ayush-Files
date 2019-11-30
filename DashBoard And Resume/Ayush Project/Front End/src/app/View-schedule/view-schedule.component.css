@@ -1,0 +1,16 @@
+table{
+    width:100%;
+}
+table,th,td{
+    cursor:pointer;
+}
+th{
+    font-size: 15px;
+}
+td{
+    font-size:15px;
+}
+img{
+    height:20px;
+    width:20px;
+}
