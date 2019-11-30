@@ -1,0 +1,2 @@
+Hi Ayush Anand.
+Getting The message from external file using fetch API method.

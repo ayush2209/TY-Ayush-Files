@@ -1,0 +1,41 @@
+ /* form{
+    border:1px solid blue; */
+    /* width:300px;
+    height:300px; */
+    /* text-align: center; */
+    /* border-radius: 15px;
+    box-shadow: 0px 0px 50px lightblue;    */
+ /* }  */
+ body{
+    margin-left: 500px;
+    margin-top: 100px;
+    border:1px solid blue;
+}
+ /* input[type="text"],
+input[type="number"]{
+    width:400px;
+    height:30px;
+    border:1px solid black;
+    border-radius: 25px;
+    text-align: center;
+}  */
+/* button{
+    margin-top:20px;
+    width:150px;
+    height:30px;
+    border-radius:25px;
+    background-color: blueviolet;
+    border:1px solid black;
+} */
+/* input[type="text"]:focus,input[type="password"]:focus{
+    outline:none;
+    background-color: wheat;
+    box-shadow: 0px 0px 15px brown;
+} */
+/* button:hover{ */
+    /* background-color: green;
+    outline: none; */
+    /* cursor: pointer;
+    box-shadow: 0px 0px 15px green;
+} */ 
+

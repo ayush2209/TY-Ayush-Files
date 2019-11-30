@@ -1,0 +1,19 @@
+<mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav class="app-sidenav" opened="true"
+        mode="side" #sidenav>
+        <mat-toolbar color="primary">
+            <a href="#" class="mr-3 bg-white rounded-circle">
+                <img src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-4/512/1-38-512.png" width="40"
+                    height="40" alt="">
+            </a>
+            Talent Hunt
+        </mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item [routerLink]=[link.url]  *ngFor="let link of links"> {{ link.name }} </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <div class="app-sidenav-content" style="z-index: 14000;">
+        <app-toolbar (toggleSideNav)="sidenav.toggle()"></app-toolbar>
+        <router-outlet style="margin: 0px;"></router-outlet>
+    </div>
+</mat-sidenav-container>

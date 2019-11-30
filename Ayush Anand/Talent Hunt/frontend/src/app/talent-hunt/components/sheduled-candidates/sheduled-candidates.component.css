@@ -1,0 +1,16 @@
+.reject:active{
+    border-bottom-width: 4px;
+    transform: translateY(4px);
+    transition: 1px ease-in-out 100s;
+    background: #f5210e;
+    border-radius: 90%;
+    cursor: pointer;
+  }
+.select:active{ 
+    border-bottom-width: 4px;
+    transform: translateY(4px);
+    transition: 1px ease-in-out 100s;
+    background: rgb(180, 241, 130);
+    border-radius: 90%;
+    cursor: pointer;
+}

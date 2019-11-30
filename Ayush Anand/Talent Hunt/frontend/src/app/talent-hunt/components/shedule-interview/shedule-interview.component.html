@@ -1,0 +1,105 @@
+<div class="col-md-8 offset-2 mt-5 card card-body">
+    <h1 class="" style="margin: 0;">Schedule Interview</h1>
+    <hr>
+    <form action="" #form="ngForm" (ngSubmit)="addCandidate(form)">
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Candidate Name" #candName="ngModel" name="candName"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="email" matInput placeholder="Enter email" #email="ngModel" name="email" ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Select Gender" #gender="ngModel" name="gender" ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Contact Number" #contactNumb="ngModel" name="contactNumb"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Total Experience" #totalExp="ngModel" name="totalExp"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Relevant Experience" #relExp="ngModel" name="relExp"
+                        ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Current Organization" #currentOrg="ngModel"
+                        name="currentOrg" ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Stack Name" #stackName="ngModel" name="stackName"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Job Description" #jobDesc="ngModel" name="jobDesc" ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Enter CCTC" #CCTC="ngModel" name="CCTC"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Enter ECTC" #ECTC="ngModel"
+                        name="ECTC" ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter location" #location="ngModel" name="location"
+                        ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+                <div class="col-md-4">
+                    <mat-form-field class="col-md-12">
+                        <input type="text" matInput placeholder="Notice Period" #noticePer="ngModel" name="noticePer"
+                            ngModel>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="col-md-12">
+                        <input type="text" matInput placeholder="Ready to Relocate" #relocate="ngModel"
+                            name="relocate" ngModel>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field class="col-md-12">
+                        <input type="text" matInput placeholder="Enter Interview Panel" #InterPanel="ngModel" name="InterPanel"
+                            ngModel>
+                    </mat-form-field>
+                </div>
+            </div>
+        <button type="submit" class="col-md-6 offset-3 btn btn-outline-success btn-lg mt-2">Add Candidate</button>
+    </form>
+</div>
+

@@ -1,0 +1,38 @@
+<div class="col-md-4 offset-4 mt-5 card card-body">
+  <form action="" #form="ngForm" (ngSubmit)="loginData(form)">
+    <div class="example-container">
+      <h4 class="text-center">Sign-Up</h4>
+      <mat-form-field>
+        <input type="email" matInput placeholder="Enter email" #email="ngModel" name="email" ngModel>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" #password="ngModel"
+          name="password" ngModel [(ngModel)]="pass" required>
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div *ngIf="password.invalid && password.touched">
+          <p *ngIf="password.errors.required" class="text-danger">*this field is required</p>
+      </div>
+      <mat-form-field>
+        <input matInput placeholder="Confirm Password" [type]="hide ? 'password' : 'text'" #conPassword="ngModel"
+          name="conPassword" ngModel [(ngModel)]="confirmPass" required>
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div *ngIf="conPassword.invalid && conPassword.touched">
+          <p *ngIf="conPassword.errors.required"class="text-danger">*this field is required</p>
+      </div>
+      <p style="margin: 0;" *ngIf="match" class="text-danger"> *password not matched</p>
+      <button type="submit" color="warn" class="mt-3" mat-raised-button [disabled]="(passDiabled === true) || (form.invalid)">Sign Up</button>
+      <div class="mt-3">
+        <hr>
+        <span>Already have an account? please... <a href="">SignIn</a> </span>
+      </div>
+    </div>
+  </form>
+</div>

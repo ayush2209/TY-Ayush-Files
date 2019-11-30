@@ -1,0 +1,174 @@
+<div
+    style="background-image: url('https://cdn.pixabay.com/photo/2017/10/17/10/05/job-2860035__340.jpg');background-repeat: no-repeat;background-size: cover; opacity: 0.9; margin : 0px;">
+    <div class="container">
+        <div class="shadow bg-white card col-md-5 mr-5 offset-6 mt-3 rounded">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center text-white rounded mt-2 mb-3"
+                    style="background-color: #e53935;font-family:'Times New Roman', Times, serif">
+                    <h1>Requirements</h1>
+                    <h4 class="my-0 display-2 text-light font-weight-normal rounded">
+                        <img src="https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649__340.jpg"
+                            height="150px" width="250px" alt="" style="width:100%">
+                    </h4>
+                </div>
+                <div class="col-md-12">
+                    <table class="col-md-12 table-responsive-xl mb-3" *ngIf="requirements">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-info">
+                                    <h4>Stack</h4>
+                                </th>
+                                <th class="text-center text-info">
+                                    <h4>Companies</h4>
+                                </th>
+                                <th class="text-center text-info">
+                                    <h4>Positions</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="mt-5">
+                            <tr class="mt-5" *ngFor="let requirement of requirements">
+
+                                <td class="text-center">
+                                    <a (click)="getRequirementsBasedStack(requirement)" class="text-danger" style="text-decoration: none;">
+                                        <h5>{{requirement._id | titlecase}}</h5>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <h5>{{requirement.NumberofCompanies}}</h5>
+                                </td>
+                                <td class="text-center">
+                                    <h4>
+                                        {{requirement.totalRequirements}}
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="shadow bg-white card mb-3 col-md-5">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center text-white rounded mt-2 mb-3"
+                    style="background-color: #a0f;font-family:'Times New Roman', Times, serif">
+                    <h1>Filled Requirements</h1>
+
+                    <h4 class="my-0 display-2 text-light font-weight-normal rounded">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/22/14/18/business-2089532_960_720.png"
+                            height="150px" width="250px" alt="" style="width:100%">
+                    </h4>
+                </div>
+                <div class="col-md-12">
+                    <table class="col-md-12 table-responsive-xl mb-3" *ngIf="filledRequirements">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-info">
+                                    <h4>Client</h4>
+                                </th>
+                                <th class="text-center text-info">
+                                    <h4>Positions</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="mt-5">
+                            <tr class="mt-5" *ngFor="let requirement of filledRequirements">
+
+                                <td class="text-center">
+                                    <a (click)="getfilledRequirementsBasedClientName(requirement)" class="text-danger" style="text-decoration: none;">
+                                        <h5>{{requirement._id | titlecase}}</h5>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <h4>
+                                        {{requirement.Positions}}
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="shadow bg-white card col-md-5 mr-5 offset-6">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center text-white rounded mt-2 mb-3"
+                    style="background-color: rgb(148, 165, 53);font-family:'Times New Roman', Times, serif">
+                    <h1>Sheduled Candidate</h1>
+                    <h4 class="my-0 display-2 text-light font-weight-normal rounded">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/22/14/18/business-2089532_960_720.png"
+                            height="150px" width="250px" alt="" style="width:100%">
+                    </h4>
+                </div>
+                <div class="col-md-12">
+                    <table class="col-md-12 table-responsive-xl mb-3">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-info">
+                                    <h4>Stack</h4>
+                                </th>
+                                <th class="text-center text-info">
+                                    <h4>totalCandidates</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="mt-5">
+                            <tr class="mt-5" *ngFor="let candidate of sheduledCandidates">
+                                <td class="text-center">
+                                    <a href="" class="text-danger" style="text-decoration: none;">
+                                        <h5>{{candidate._id | titlecase}}</h5>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <h4>
+                                        {{candidate.totalCandidates}}
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="shadow bg-white card mb-3 col-md-5">
+            <div class="row no-gutters">
+                <div class="col-md-12 text-center text-white rounded mt-2 mb-3"
+                    style="background-color: rgb(18, 74, 148);font-family:'Times New Roman', Times, serif">
+                    <h1>Shortlisted Canididate</h1>
+                    <h4 class="my-0 display-2 text-light font-weight-normal rounded">
+                        <img src="http://huntscanlon.com/wp-content/uploads/2016/11/Picking-heads-e1478136165506-300x222.jpg"
+                            height="150px" width="250px" alt="" style="width:100%">
+                    </h4>
+                </div>
+                <div class="col-md-12">
+                    <table class="col-md-12 table-responsive-xl mb-3">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-info">
+                                    <h4>Stack</h4>
+                                </th>
+                                <th class="text-center text-info">
+                                    <h4>totalCandidates</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="mt-5">
+                            <tr class="mt-5" *ngFor="let candidate of selectedCandidates">
+                                <td class="text-center">
+                                    <a href="" class="text-danger" style="text-decoration: none;">
+                                        <h5>{{candidate._id | titlecase}}</h5>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <h4>
+                                        {{candidate.totalCandidates}}
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,256 @@
+<div class="row mt-2 ml-3">
+  <div class="col" style="font-family: 'Courier New', Courier, monospace;">
+      <h2>Schdeule Interview</h2>
+  </div>
+  <div class="col-md-12-offset-8">
+    <a href="#myModal" role="button" class="btn btn-primary btn-sm" data-toggle="modal">Schdeule Interview</a>
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Schdeule Interview</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHeEG6wEh6o0bK5TQ22UmQA2jhxYyg3rWs9EOx2wqE3w99-gzP&s" alt="" 
+                      style="height: 50px;shape-outside: none;"></span>
+                </button>
+            </div>
+            <div class="modal-body col-md-12">  
+                <form action="" method="POST" role="form" #interviewForm='ngForm' (ngSubmit)='schduleInterview(interviewForm.value)'>    
+                <div class="form-row">                  
+                    <div class="form-group col-md-6" >
+                        <select class="form-control"  name="interviewname" #interviewname='ngModel'  ngModel required>
+                            <option value="" selected disabled hidden> Interview Name</option>
+                            <option>None</option>  
+                            <option>Internal Interview</option>
+                            <option>General Interview</option>
+                            <option>Online Interview</option>
+                            <option>Phone Interview</option>
+                            <option>Level-1 nterview</option>
+                            <option>Level-2 nterview</option>
+                            <option>Level-3 nterview</option>
+                            <option>Level-4 nterview</option>
+                          </select>                        
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="hidden" name="id">
+                        <input type="text" class="form-control" name="name" placeholder="Enter Candidate Name" #name="ngModel"
+                            ngModel required>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                            <div *ngIf="name.errors.required">
+                                Name is required.
+                            </div>
+                            <div *ngIf="name.errors.minlength">
+                                Name must be at least 4 characters long.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control" name="email" placeholder="Enter Email" #email="ngModel"
+                            ngModel required>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                            <div *ngIf="name.errors.required">
+                                email is required.
+                            </div>
+                            <div *ngIf="email.errors.minlength">
+                                email must be at least 4 characters long.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="number" name="contactno" #contactno='ngModel' class="form-control"
+                            placeholder="Enter Contact No." ngModel required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="date" name="opening" #opening='ngModel' class="form-control" placeholder="Opening Date"
+                            ngModel required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="date" name="closing" #closing='ngModel' class="form-control"
+                            placeholder="Closing Date" ngModel required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" name="clientname" #clientname='ngModel' class="form-control"
+                            placeholder="Clent Name" ngModel required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="number" name="salary" #salary='ngModel' class="form-control"
+                            placeholder="Ctc" ngModel required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" name="skills" #skills='ngModel' class="form-control" placeholder="Skills" ngModel
+                            required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" name="location" #location='ngModel' class="form-control" placeholder="Location"
+                            ngModel required>
+                    </div>
+                </div>
+                 <div class="modal-footer"> 
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    <!-- <button type="submit" class="btn btn-primary float-right">Submit</button>  -->
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                  </div> 
+                </form>
+                </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-outline-primary btn-sm">Cancel</button>
+      </div>
+</div>
+<hr>
+<div class="row">
+
+
+<!-- <div class="col-md-2 ml-2">
+  <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Filter :</p>
+  <hr>
+  <form action="">
+    <div>
+        <select class="form-control"  name="interviewnamefilter" #interviewnamefilter='ngModel'  ngModel required>
+            <option value="" selected disabled hidden> Interview Name</option>
+            <option>None</option>  
+            <option>Internal Interview</option>
+            <option>General Interview</option>
+            <option>Online Interview</option>
+            <option>Phone Interview</option>
+            <option>Level-1 nterview</option>
+            <option>Level-2 nterview</option>
+            <option>Level-3 nterview</option>
+            <option>Level-4 nterview</option>
+          </select>
+    </div>
+    <button type="submit" class="btn btn-secondary btn-sm float-right mt-2" (click)='filterData(interviewnamefilter)'>Filter</button>
+  </form>
+ </div> -->
+
+
+  <div class="container " id="scroll"> 
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr class="text-white text-center">
+          <th>Index</th>
+          <th>Interview Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Candidate Name</th>
+          <th>Client Name</th>
+          <th>Posting Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" data-toggle="modal" data-target="#exampleModal1" *ngFor='let interviewData of getInterviewData ,  index as i' 
+        (click)='selectRow(interviewData._id)'>            
+          <td>{{i+1}}</td>
+          <td>{{interviewData.interviewname | lowercase}}</td>
+          <td>{{interviewData.opening}}</td>
+          <td>{{interviewData.closing}}</td>
+          <td>{{interviewData.name}}</td>
+          <td>{{interviewData.clientname}}</td>
+          <td>{{interviewData.skills | lowercase}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+</div>
+<!-- <div *ngFor='let interviewData of getInterviewData'>
+    {{interviewData.interviewname | lowercase}}
+    {{interviewData.opening}}
+</div> -->
+<!-- ------------------ -->
+  <div class="modal" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="exampleModalLabel ml-5" style="font-size: larger; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+           <b style="color: cornflowerblue;">Interview Details</b>   : {{rowData.interviewname}}</p>
+            <button class="btn btn-primary btn-sm flaot-right offset-7" (click)='submitEvaluation()' data-toggle="modal" data-target="#exampleModal">Submit Evaluation</button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+            <div class="row container">
+                <div>
+                    <p id="marginleft">Candidate Name :</p>
+                </div>
+               <div>
+                 <p id="marginleft1">{{rowData.name}}</p>
+               </div>
+            </div>
+            <div class="row container">
+              <div>
+                  <p id="marginleft">Client Name :</p>
+              </div>
+             <div>
+               <p id="marginleft1">{{rowData.clientname}}</p>
+             </div>
+            </div>
+            <div class="row container">
+                <div>
+                    <p id="marginleft">Position Title :</p>
+                </div>
+               <div>
+                 <p id="marginleft1">{{rowData.skills}}</p>
+               </div>
+            </div>
+            <div class="row container">
+                <div>
+                    <p id="marginleft">Interview Status :</p>
+                </div>
+               <div>
+                 <p id="marginleft1">On Hold</p>
+               </div>
+            </div>
+            <div class="row container">
+                <div>
+                    <p id="marginleft">Opening Date :</p>
+                </div>
+               <div>
+                 <p id="marginleft1">{{rowData.opening}}</p>
+               </div>
+            </div>
+            <div class="row container">
+                <div>
+                    <p id="marginleft">Location :</p>
+                </div>
+               <div>
+                 <p id="marginleft1">{{rowData.location}}</p>
+               </div>
+            </div>
+            <hr>
+            <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: larger; margin-left: 10px;">
+                <b style="color: cornflowerblue;">Attachments :-</b></p>
+            <hr>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- submit evaluation model where we are providing interview status and comments  -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Evaluation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

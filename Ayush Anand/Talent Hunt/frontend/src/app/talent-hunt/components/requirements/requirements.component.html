@@ -1,0 +1,77 @@
+<div *ngIf="service.requirement"  class="col-md-4 offset-4 mt-2">
+    <p class="text-white bg-dark" style="padding: 15px; border-radius: 5px;">Requirement Added Successfully..</p>
+  </div>
+<div class="mat-elevation-z8 col-md-10 offset-1 mt-3">
+    <table class="col-md-12" mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>Select</th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)" (change)="selectCandidate(row , $event)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="clientName">
+            <th mat-header-cell *matHeaderCellDef> clientName </th>
+            <td mat-cell *matCellDef="let element"> {{element.clientName}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="stackName">
+            <th mat-header-cell *matHeaderCellDef> stackName </th>
+            <td mat-cell *matCellDef="let element"> {{element.stackName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="exp">
+            <th mat-header-cell *matHeaderCellDef> exp </th>
+            <td mat-cell *matCellDef="let element"> {{element.exp}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="positions">
+            <th class="text-center" mat-header-cell *matHeaderCellDef> positions </th>
+            <td mat-cell *matCellDef="let element"> {{element.noOfPositions}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> location </th>
+            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="designation">
+            <th mat-header-cell *matHeaderCellDef> designation </th>
+            <td mat-cell *matCellDef="let element"> {{element.designation}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="closingDate">
+            <th mat-header-cell *matHeaderCellDef> closingDate </th>
+            <td mat-cell *matCellDef="let element"> {{element.closingDate | date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="CTC">
+            <th mat-header-cell *matHeaderCellDef> CTC </th>
+            <td mat-cell *matCellDef="let element"> {{element.CTC}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="startDate">
+            <th mat-header-cell *matHeaderCellDef> startDate </th>
+            <td mat-cell *matCellDef="let element"> {{element.startDate | date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Edit </th>
+            <td mat-cell *matCellDef="let element">
+                <button type="submit" class="btn btn-outline-info" (click)="editRequirement(element)">Edit</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[6, 8, 16]" showFirstLastButtons></mat-paginator>
+</div>

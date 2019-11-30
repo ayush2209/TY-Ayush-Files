@@ -1,0 +1,64 @@
+<div class="col-md-6 offset-3 mt-5 card card-body">
+    <h1 class="" style="margin: 0;">Add Requirement</h1>
+    <hr>
+    <form action="" #form="ngForm" (ngSubmit)="addRequirement(form)">
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Client Name" #clientName="ngModel" name="clientName"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Stack Name" #stackName="ngModel" name="stackName"
+                        ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Experience Required" #Experience="ngModel"
+                        name="Experience" ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="No of Positions" #positions="ngModel" name="positions"
+                        ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Location" #location="ngModel" name="location"
+                        ngModel>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="text" matInput placeholder="Enter Designation" #designation="ngModel"
+                        name="designation" ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a closing date" #closingDate="ngModel"
+                        ngModel name="closingDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="col-md-12">
+                    <input type="number" matInput placeholder="Enter CTC" #CTC="ngModel" name="CTC" ngModel>
+                </mat-form-field>
+            </div>
+        </div>
+        <button type="submit" class="col-md-6 offset-3 btn btn-outline-success btn-lg mt-2">Add Requirement</button>
+    </form>
+</div>

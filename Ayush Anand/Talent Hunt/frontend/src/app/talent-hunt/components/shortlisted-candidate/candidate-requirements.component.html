@@ -1,0 +1,60 @@
+
+
+<div class="col-md-4 offset-4" *ngIf="!requirements" class="spinner-border text-danger" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="candidateDetails">
+  <h2 *ngIf="candidateDetails" mat-dialog-title>Deploy {{candidateDetails.candName}} having total experience of {{candidateDetails.totalExp}} years on {{candidateDetails.stackName}}</h2>
+  <mat-dialog-content class="mat-typography col-md-12" style="margin: 0px !important;">
+    <div class="mat-elevation-z0 mt-1 mb-1">
+      <table class="col-md-12" mat-table [dataSource]="requirements">
+
+        <ng-container matColumnDef="select" class="ml-5">
+          <th mat-header-cell *matHeaderCellDef>Select</th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+              [checked]="selection.isSelected(row)" (change)="selectRequirement(row , $event)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="clientName" class="ml-5">
+          <th mat-header-cell *matHeaderCellDef> clientName </th>
+          <td mat-cell *matCellDef="let element"> {{element.clientName}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="stackName" class="ml-5">
+          <th mat-header-cell *matHeaderCellDef> stackName </th>
+          <td mat-cell *matCellDef="let element"> {{element.stackName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="exp" class="ml-5">
+          <th mat-header-cell *matHeaderCellDef> exp </th>
+          <td mat-cell *matCellDef="let element"> {{element.exp}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="positions" class="ml-5">
+          <th class="text-center" mat-header-cell *matHeaderCellDef> positions </th>
+          <td mat-cell *matCellDef="let element"> {{element.noOfPositions}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="CTC" class="ml-5">
+          <th mat-header-cell *matHeaderCellDef> CTC </th>
+          <td mat-cell *matCellDef="let element"> {{element.CTC}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="requirementColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: requirementColumns;"></tr>
+      </table>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="deployCandidate()">Deploy</button>
+  </mat-dialog-actions>
+</div>

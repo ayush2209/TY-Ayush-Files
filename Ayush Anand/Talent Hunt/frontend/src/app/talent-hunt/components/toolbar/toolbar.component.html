@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #3f51b5;">
+    <button class="sidenav-toggle text-white" type="button" mat-button (click)="toggleSideNav.emit()">
+        <mat-icon>
+            menu
+        </mat-icon>
+    </button>
+    <a href="#" class="mr-2 bg-white rounded-circle">
+        <img src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-4/512/1-38-512.png" width="40" height="40"
+            alt="">
+    </a>
+    <a class="navbar-brand text-white">Talent Hunt</a>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="dashboard">DashBoard</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="sign-in">Signin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="sign-up">Signup</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,565 @@
+ <!-- <div class="container"> 
+ <div class="col-md-3 mt-4 float-left card card-body">  -->
+  <!-- <div class="card-deck mb-3 mt-4 text-center">
+    <div class="card mb-4 float-left" style="box-shadow: 5px 10px 5px 5px lightslategray" id="table">
+      <div class="card-header bg-dark text-white">
+                <h4 class="text-center text-white bg-dark">Requirements</h4>
+           </div>  
+               
+         <table class="mt-3">
+           <tr>
+             <th>Skill</th>
+             <th>Details</th>
+           </tr>
+             <tr *ngFor="let req of service.require">
+                 <td>{{req.skill}}</td> 
+                <td><button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong"
+                    (click)='dashboard(req)'>
+                        Details
+                      </button>
+                      </td>
+                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                        
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <table class="table table-bordered">
+                                      <thead class="thead-dark">
+                                          <tr>
+                                              <th>Company</th>
+                                              <th>No of Positions</th>
+                                          </tr>
+                                          <tr *ngFor="let data of dash">
+                                              <td>{{data.cname}}</td>
+                                              <td>{{data.position}}</td>
+                                          </tr>
+                                      </thead>
+                                  </table>
+                                </div>
+                
+                              </div>
+                            </div>
+                          </div> -->
+                        
+                 <!-- <td>5</td>  -->
+            <!-- </tr> -->
+            <!-- <tr>
+                <td>Java</td> 
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                       Details 
+                      </button>
+                      </td>
+                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                        
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <table class="table table-bordered">
+                                      <thead class="thead-dark">
+                                          <tr>
+                                              <th>Company</th>
+                                              <th>No of Positions</th>
+                                          </tr>
+                                      </thead>
+                                  </table>
+                                </div>
+                
+                              </div>
+                            </div>
+                          </div>
+                        
+                <td>12</td> -->
+            <!-- </tr>
+            <tr>
+                <td>MERN</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Details
+                      </button>
+                      </td>
+                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                        
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <table class="table table-bordered">
+                                      <thead class="thead-dark">
+                                          <tr>
+                                              <th>Company</th>
+                                              <th>No of Positions</th>
+                                          </tr>
+                                      </thead>
+                                  </table>
+                                </div>
+                
+                              </div>
+                            </div>
+                          </div>
+                        
+                 <td>10</td> -->
+            <!-- </tr>
+            <tr>
+                <td>PHP</td> 
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                   Details      
+                      </button>
+                      </td>
+                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                        
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <table class="table table-bordered">
+                                      <thead class="thead-dark">
+                                          <tr>
+                                              <th>Company</th>
+                                              <th>No of Positions</th>
+                                          </tr>
+                                      </thead>
+                                  </table>
+                                </div>
+                
+                              </div>
+                            </div>
+                          </div>  -->
+                        
+                <!-- <td>15</td> -->
+            <!-- </tr>  -->
+    <!-- </table>
+  </div>
+  
+  <div class="card mb-4 float-left" style="box-shadow: 5px 10px 5px 5px lightslategray">
+      <div class="card-header bg-dark text-white">
+        <h4 class="my-0 font-weight-normal">Filled Requirement</h4>
+        </div>
+         <table class="text-center">
+           <tr>
+             <th>Skill</th>
+             <th>Filled Position</th>
+           </tr>
+             <tr *ngFor="let req of service.require">
+             <td>{{req.skill}}</td>
+             <td>{{req.position}}</td>
+             </tr>
+         </table>
+</div>
+<div class="card mb-4" style="box-shadow: 5px 10px 5px 5px lightslategray">
+    <div class="card-header bg-dark text-white">
+        <h4 class="my-0 font-weight-normal">Scheduled Interviews</h4>
+        </div>
+         <table class="text-center">
+           <tr>
+             <th>Candidate</th>
+             <th>Skill</th>
+           </tr>
+             <tr *ngFor="let sche of service.schedule">
+             <td>{{sche.name}}</td>
+             <td>{{sche.role}}</td>
+             </tr>
+         </table>
+</div>
+<div class="card mb-4" style="box-shadow: 5px 10px 5px 5px lightslategray">
+    <div class="card-header bg-dark text-white">
+        <h4 class="my-0 font-weight-normal">Shortlisted</h4>
+        </div>
+         <table class="text-center">
+           <tr>
+             <th>Candidate</th>
+             <th>Skill</th>
+           </tr>
+             <tr *ngFor="let shortlis of service.candidates">
+             <td>{{shortlis.name}}</td>
+             <td>{{shortlis.role}}</td>
+             </tr>
+         </table>
+</div>
+ </div>
+ </div>    -->
+
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div *ngIf="service.logginMsg">
+  <div class="bg-success text-dark text-center">Login Successfully</div>
+</div>
+<div class="container-fluid bg-gradient p-5 ">
+
+    <div class="row ml-auto mr-auto text-center w-75">
+            <div class="col-5 princing-item" style="padding-left: 53px">
+                    <div class="pricing-divider ">
+                        <h3 class="text-light"> REQUIREMENTS</h3>
+                      <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><img src="https://media-public.canva.com/MADPrwfmVN4/1/thumbnail_large.jpg" height="150px" width="250px" alt="" style="width:100%">
+
+                      </h4>
+                       <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                    <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+              c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                    <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+              c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                    <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+              H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                    <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+              c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                  </svg>
+                    </div>
+            
+                    <div class="card-body bg-white mt-0 shadow">
+                        <div class="container">
+                            <table  class="mt-3">
+                                    <tr colspan="3" rowspan="2">
+                                      <th>Skill</th>
+                                      <th>No of companies</th>
+                                      <th>Details</th>
+                                    </tr>
+                                    <tr *ngFor="let req of service.require">
+                                        <td>{{req._id}}</td>
+                                        <td>{{req.count}}</td>
+                                        <td>
+                    
+                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal"
+                                                (click)="dashboard(req._id)">
+                                                ...
+                    
+                                            </button>
+                    
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Requirement details</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <table class="table ">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Company Name</th>
+                                                                        <th>Skill</th>
+                                                                        <th>Position</th>
+                    
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    
+                    
+                                                                      <tr *ngFor="let data of dash">
+                                                                     <td>{{data.cname}}</td> 
+                                                                     <td>{{data.skill}}</td>
+                                                                        <td>{{data.position}}</td> 
+                                                                    </tr>
+                    
+                    
+                    
+                                                                    
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                    
+                                </table>
+                            </div>
+                      
+                    </div>
+                  </div>
+                  
+      
+      
+
+      
+      
+      <div class="col-5 ml-auto mr-auto princing-item blue" style="padding-right: 46px">
+        <div class="pricing-divider ">
+            <h3 class="text-light">FILLED REQUIREMENTS</h3>
+          <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><img src="https://cdn.pixabay.com/photo/2017/02/22/14/18/business-2089532_960_720.png" height="150px" width="250px" alt="" style="width:100%">
+          </h4>
+           <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+        <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+  c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+        <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+  c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+        <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+  H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+        <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+  c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+      </svg>
+        </div>
+
+        <div class="card-body bg-white mt-0 shadow">
+                <div class="container">
+                    <table  class="mt-3">
+                            <tr colspan="3" rowspan="2">
+                              <th>Skill</th>
+                              <th>No of Companies</th>
+                              <th>Details</th>
+                            </tr>
+                            <tr *ngFor="let req of service.filledrequire">
+                                <td>{{req._id}}</td>
+                                <td>{{req.count}}</td>
+                                <td>
+            
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal1"
+                                        (click)="dashboardFilledRequire(req._id)">
+                                        ...
+                                    </button>
+            
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel1">Filled requirement details</h5>
+                                                    <button type="button" class="close" da ta-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table ">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Company Name</th>
+                                                                <th>Position</th>
+                                                                 <th>Skill</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr *ngFor="let data of dashfilled">
+                                                            <td>{{data.cname}}</td>
+                                                            <td>{{data.position}}</td>
+                                                            <td>{{data.skill}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+            
+                        </table>
+                    </div>
+      </div>
+    </div>
+</div>
+             
+      
+
+      
+      
+
+<div class="container-fluid bg-gradient p-5 ">
+
+        <div class="row ml-auto mr-auto text-center w-75">
+                <div class="col-5 princing-item green">
+                        <div class="pricing-divider ">
+                            <h3 class="text-light"> SCHEDULE INTERVIEW</h3>
+                          <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><img src="https://cdn.pixabay.com/photo/2014/06/18/13/23/time-371226__340.jpg" height="150px" width="250px" alt="" style="width:100%">
+    
+                          </h4>
+                           <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                        <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+                  c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                        <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+                  c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                        <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+                  H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                        <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+                  c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                      </svg>
+                        </div>
+                
+                        <div class="card-body bg-white mt-0 shadow">
+                            <div class="container">
+                                <table  class="mt-3">
+                                        <tr colspan="3" rowspan="2">
+                                          
+                                           
+                                           <th>Skill</th>
+                                            <th>Scheduled candidates</th> 
+                                           <th>Details</th> 
+                                        </tr>
+                                        <tr *ngFor="let sche of service.schedule">
+                                            
+                                            <td>{{sche._id}}</td>
+                                            <td>{{sche.count}}</td> 
+                                            <td>
+                        
+                                                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal2"
+                                                    (click)="dashboardSched(sche._id)">
+                                                    ...
+                                                </button>
+                        
+                                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel2">Scheduled Interview details</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <table class="table ">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Candidate Name</th>
+                                                                            <th>Skill</th>
+                                                                            <th>Company Name</th>
+                                                                          
+                                                                            <!-- <th>Position</th> -->
+                         
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr *ngFor='let data of dashcandi'>
+                                                                             <td>{{data.name}}</td>
+                                                                             <td>{{data.role}}</td>
+                                                                            <td>{{data.cname}}</td>
+                                                                            <!-- <td>{{data.position}}</td>                  -->
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                        
+                                    </table>
+                                </div>
+                          
+                        </div>
+                      </div>
+                      
+        
+          
+          <div class="col-5 ml-auto mr-auto princing-item red ">
+            <div class="pricing-divider  ">
+                <h3 class="text-light">SHORTLISTED</h3>
+              <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><img src="http://huntscanlon.com/wp-content/uploads/2016/11/Picking-heads-e1478136165506-300x222.jpg" height="150px" width="250px" alt="" style="width:100%">
+              </h4>
+               <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+      c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+            <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+      c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+            <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+      H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+            <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+      c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+          </svg>
+            </div>
+    
+            <div class="card-body bg-white mt-0 shadow">
+                    <div class="container">
+                            <table class="mt-3">
+                                    <tr colspan="3" rowspan="2">
+                                  
+                                      <th>Skill</th>
+                                      <th>Selected Candidate</th>
+                                      <th>Details</th>
+                                    </tr>
+                                   <tr *ngFor='let short of service.candi'>
+                                        <!-- <td>{{short.name}}</td> -->
+                                        <td>{{short._id}}</td>
+                                        <td>{{short.count}}</td>
+                                        <!-- <td>{{short.cname}}</td>  -->
+                                       <td>
+                    
+                                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal3"
+                                             (click)='dashboardselect(short._id)'>
+                                                ...
+                                            </button>
+                    
+                    
+                                            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel3">Shortlisted Candidate</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Company</th>
+                                                                        <th>Skill</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr *ngFor="let short of dashselect">
+                                                                        <td>{{short.name}}</td>
+                                                                        <td>{{short.cname}}</td>
+                                                                        <td>{{short.role}}</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td> 
+                                     </tr> 
+                    
+                    
+                                </table>
+                    
+                        </div>
+          </div>
+        </div>
+    </div>
